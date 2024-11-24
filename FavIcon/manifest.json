@@ -1,5 +1,7 @@
 {
  "name": "پنل مدیریت سفارش‌های روتین",
+ "short_name": "پنل روتین",
+ "start_url": "https://tripasect.github.io/2lfin-panel",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
@@ -41,6 +43,7 @@
   "display": "standalone",
   "theme_color": "#091360",
   "background_color": "#091360",
+  
   "id": "cafekalya",
   "description": "پنل مدیریت سفارش‌های روتین",
   "dir": "rtl",
