@@ -1,107 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>پنل روتین دلفین‌مارکت</title>
-
-    <!-- Include Google Fonts (Vazir font for Persian) -->
-    <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
     
-    <style>
-        body {
-            font-family: 'Vazir', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            direction: rtl; /* Right-to-left text direction for Persian */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="./css/animate.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Noto+Kufi+Arabic:100..900,40&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Noto+Sans+Arabic:100..900,700,40&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <title>پنل سفارش روتین • دلفین مارکت</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بیت‌کوین‌های سعیده</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            padding: 20px;
-            background-color: #4CAF50;
-            color: white;
-            width: 100%;
-        }
+<!-- Standard favicon -->
+<link rel="icon" href="FavIcon/favicon.ico" type="image/x-icon">
 
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-            font-weight: 700;
-        }
+<!-- Favicon for different sizes -->
+<link rel="icon" type="image/png" sizes="16x16" href="FavIcon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="FavIcon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="FavIcon/favicon-96x96.png">
 
-        .link-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px; /* Space between buttons */
-            align-items: center;
-            width: 100%;
-            max-width: 400px; /* Max width for the buttons */
-            margin-top: 20px;
-        }
+<!-- Apple Touch Icons -->
+<link rel="apple-touch-icon" sizes="57x57" href="FavIcon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="FavIcon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="FavIcon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="FavIcon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="FavIcon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="FavIcon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="FavIcon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="FavIcon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="FavIcon/apple-icon-180x180.png">
 
-        .link-container a {
-            text-decoration: none;
-            font-size: 20px;
-            padding: 15px 25px;
-            border-radius: 5px;
-            background-color: #3498db;
-            color: white;
-            font-weight: 500;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            width: 100%;
-            text-align: center;
-        }
+<!-- Android Icons -->
+<link rel="icon" type="image/png" sizes="36x36" href="FavIcon/android-icon-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="FavIcon/android-icon-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="FavIcon/android-icon-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="FavIcon/android-icon-96x96.png">
+<link rel="icon" type="image/png" sizes="144x144" href="FavIcon/android-icon-144x144.png">
+<link rel="icon" type="image/png" sizes="192x192" href="FavIcon/android-icon-192x192.png">
 
-        .link-container a:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-        }
+<!-- Microsoft Icons -->
+<meta name="msapplication-TileImage" content="FavIcon/ms-icon-144x144.png">
+<meta name="msapplication-square70x70logo" content="FavIcon/ms-icon-70x70.png">
+<meta name="msapplication-square150x150logo" content="FavIcon/ms-icon-150x150.png">
+<meta name="msapplication-square310x310logo" content="FavIcon/ms-icon-310x310.png">
+<meta name="msapplication-config" content="FavIcon/browser_config.xml">
 
-        footer {
-            position: absolute;
-            bottom: 20px;
-            text-align: center;
-            width: 100%;
-            font-size: 14px;
-            color: #555;
-        }
+<!-- Manifest file -->
+<link rel="manifest" href="FavIcon/manifest.json">
+<!-- Standard favicon for most browsers -->
+<link rel="icon" href="/favicons/favicon.png" type="image/x-icon">
 
-        /* Mobile responsiveness */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 28px;
-            }
+<!-- PNG icons for modern browsers -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/16x16.png">
 
-            .link-container a {
-                font-size: 18px; /* Adjust font size for mobile */
-            }
-        }
-    </style>
+<!-- Apple Touch Icon for iOS devices -->
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/180x180.png">
+
+<!-- Android Chrome icon -->
+<link rel="manifest" href="/favicons/site.webmanifest">
+
+
+<meta charset="UTF-8">
+<title>پنل سفارش‌های روتین • دلفین مارکت</title>
+
+
+    
+<!-- Analytics -->
+ 
+<!-- Analytics END -->
+    
 </head>
 <body>
 
-    <header>
-        <h1>پنل روتین دلفین‌مارکت</h1>
-    </header>
+<!-- Preloader -->
+<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+<!-- Preloader END -->
 
-    <div class="link-container">
-        <a href="./days_of_the_week/SAT.html">شنبه</a>
-        <a href="./days_of_the_week/SUN.html">یکشنبه</a>
-        <a href="./days_of_the_week/MON.html">دوشنبه</a>
-        <a href="./days_of_the_week/TUE.html">سه‌شنبه</a>
-        <a href="./days_of_the_week/WED.html">چهارشنبه</a>
-        <a href="./days_of_the_week/THU.html">پنج‌شنبه</a>
-        <a href="./days_of_the_week/FRI.html">جمعه</a>
-    </div>
+
+<!-- Main container -->
+<div class="page-container">
+    
+<!-- bloc-1 -->
+<div class="bloc sticky-nav bloc-bg-texture texture-paper bgc-598 d-bloc" id="bloc-1">
+	<div class="container bloc-no-padding">
+		<div class="row">
+			<div class="text-left offset-lg-0 align-self-center text-lg-center col-sm-3 col-lg-2 col-5 col-md-3">
+				<div class="text-center">
+					<div class=" animated puffIn" data-appear-anim-style="puffIn">
+						<!--?xml version="1.0" encoding="UTF-8"</blocs-php-snippet-->
+<!-- Generated by Pixelmator Pro 3.6.12 -->
+<svg width="100" height="100" viewBox="0 0 356 236" xmlns="http://www.w3.org/2000/svg">
+    <path id="Path" fill="#FFFFFF" stroke="none" d="M 285.75 72.75 C 301.350006 75.179993 317.480011 76.570007 333 72.740005 C 327.709991 56.169998 315.339996 42.980011 297.799988 39.690002 L 301.410004 22.179993 C 302.170013 21.019989 310.019989 23.440002 311.640015 23.980011 C 337.600006 32.600006 355.859985 58.139999 356.109985 85.380005 C 334 94.410004 309.149994 95.690002 285.73999 91.5 L 285.73999 72.75 Z M 219.75 147 L 219.75 211.880005 C 219.75 220.660004 209.029999 230.98999 201.179993 233.809998 C 198.550003 234.76001 189.789993 238.070007 189.020004 234.350006 C 187.929993 229.070007 187.779999 222.880005 186.740005 217.5 C 191.919998 218.410004 198.740005 214.450012 198.740005 208.869995 L 198.740005 146.990005 L 219.740005 146.990005 Z M 150.389999 170.229996 C 157.960007 173.410004 160.220001 182.200012 159.75 189.75 L 109.110001 189.720001 L 106.050003 187.450012 C 105.676422 186.710022 106.066719 186.212646 106.316147 185.894775 L 106.489998 146.979996 L 85.489998 146.979996 L 85.489998 181.859985 C 85.489998 185.160004 82.75 189.51001 79.059998 189.690002 C 72.409531 189.264099 65.432709 189.547913 58.423645 189.833008 L 58.423317 189.833008 C 50.45639 190.157074 42.447926 190.482849 34.830002 189.769989 C 20.51 188.429993 25.799999 171.169998 31.369999 163.229996 L 16.959999 150.800003 C -2.23 166.820007 -0.51 205.850006 28.869999 208.480011 C 42.84 209.730011 67.25 209.51001 81.389999 208.529999 C 87.839996 208.079987 93.489998 206.440002 98.610001 202.470001 C 100.919998 203.769989 102.669998 205.350006 105.220001 206.390015 L 112.110001 208.5 L 181.490005 208.5 L 181.465881 200.541779 C 181.528397 190.798645 181.593506 180.650421 178.100006 171.759995 C 174.850006 163.470001 167.190002 154.869995 158.240005 152.990005 C 158.019165 152.150787 158.291458 151.869751 158.62207 151.528549 L 158.979996 151.110001 C 162.389999 146.149994 170.229996 141.199997 173.940002 136.020004 C 174.089996 135.160004 163.029999 123.869995 161.990005 123.330002 C 161.110001 122.869995 160.75 122.970001 160.100006 123.699997 L 129.050003 154.970001 C 128.889999 155.880005 140.899994 167.979996 141.759995 168.360001 C 143.75 169.240005 147.369995 168.960007 150.389999 170.229996 Z M 274.880005 189.75 L 256.5 189.75 L 256.5 119.619995 L 255.380005 118.5 L 235.880005 118.5 L 234.759995 119.619995 L 234.759995 208.5 L 276.380005 208.5 C 280.890015 208.5 287.299988 203.709991 289.98999 203.440002 C 291.064575 203.336792 293.635529 204.324554 296.029572 205.244354 L 300 206.630005 C 318.019989 210.869995 335.329987 206.920013 352.420013 200.910004 C 354.209991 176.149994 335.779999 144.559998 307.970001 147.089996 C 295.160004 148.259995 285.329987 158.619995 281.890015 170.509995 C 280.779999 174.360001 279.769989 189.75 274.880005 189.75 Z M 302.470001 176.839996 C 309.179993 152.25 327.869995 174.139999 330 188.23999 C 320.540009 189.859985 310.579987 191.23999 301.480011 187.149994 C 300.035522 185.743561 301.679596 179.731323 302.370087 177.206329 L 302.470001 176.839996 Z M 65.029999 121.660004 C 79.410004 118.350006 80.360001 139.490005 67.150002 138.779999 C 56.849998 138.229996 56.849998 123.539993 65.029999 121.660004 Z M 46.91 138.779999 C 59.760002 139.470001 59.269997 118.690002 44.799999 121.679993 C 36.009998 123.490005 36.959999 138.240005 46.91 138.779999 Z M 112.110001 118.509995 C 120.960007 126.789993 132.520004 112.520004 124.270004 105.229996 C 115.989998 97.899994 103.559998 110.520004 112.110001 118.509995 Z M 135.529999 103.660004 C 151.880005 99.919998 150.300003 124.169998 135.729996 120.399994 C 127.880005 118.369995 127.960007 105.399994 135.529999 103.660004 Z M 272.25 93.75 L 272.25 3.769989 L 251.25 3.769989 L 251.25 75.020004 L 228 75.020004 L 228 38.640015 C 213.220001 30.399994 195.160004 25.950012 179.770004 35.410004 C 166.039993 43.850006 161.070007 59.899994 166.5 75.009995 L 142.119995 75.009995 L 138.649994 73.179993 L 138.119995 72.279999 L 138.740005 70.889999 L 138.740005 32.269989 L 117.739998 32.269989 L 117.739998 67.889999 C 117.739998 71.270004 114.709999 74.449997 111.32 74.970001 C 107.269997 75.589996 95.330002 75.5 91.099998 75.039993 C 89.440002 74.860001 88.220001 74.149994 86.709999 73.600006 C 85.279999 63.460007 83.400002 53.490005 78.690002 44.320007 C 76.32 44.669998 60.300003 52.699997 60.059998 53.720001 C 67.790001 68.669998 68.169998 97.550003 46.119999 99.759995 C 24.07 101.970001 17.48 81.149994 22.48 63.059998 L 3.01 54.759995 C -1.13 68.910004 -2.1 84.520004 5.4 97.740005 C 22.780001 128.389999 72.389999 124.770004 83.279999 90.779999 C 87.029999 91.369995 90.209999 93.360001 94.129997 93.75 C 101.440002 94.470001 117.050003 94.369995 123.729996 91.860001 C 126.449997 90.839996 128.350006 89.199997 130.770004 87.809998 C 133.320007 90.300003 140.270004 93.75 143.630005 93.75 L 272.25 93.75 Z M 186.369995 67.509995 C 181.830002 53.860001 194.5 45.529999 207 49.5 L 207 75 L 193.880005 75 C 191.600006 75 187.149994 69.850006 186.369995 67.509995 Z M 40.299999 17.429993 C 56.779999 14.459991 58.190002 41.040009 40.169998 38.200012 C 29.639999 36.540009 29.689999 19.339996 40.299999 17.429993 Z M 189 8.630005 C 188.669998 11.899994 189.080002 15.350006 191.5 17.75 L 191.5 17.76001 C 199.559998 25.730011 213.259995 17.890015 208.850006 6.029999 C 205.240005 -3.679993 190.050003 -1.910004 189 8.630005 Z"></path>
+</svg>
+						
+					</div>
+				</div>
+			</div>
+			<div class="text-left col-sm-9 offset-lg-1 col-lg-9 col-7 col-md-6 offset-md-0">
+					<h1 class="mb-4 float-lg-none menu-page-title btn-resize-mode h1-style animated puffIn text-lg-left text-sm-left text-left text-md-left" data-appear-anim-style="puffIn" onclick="goBack()">
+						<div>
+							پنل سفارش‌های روتین<br>دلفین مارکت
+						</div>
+					</h1>
+				</div>
+		</div>
+		<div class="row no-gutters">
+				<div class="text-left col-lg-6 col-md-6 col-sm-6 col-4">
+					<nav class="navbar navbar-light row navbar-expand-md flex-column pt-0 pb-0">
+					</nav>
+				</div>
+			</div>
+	</div>
+</div>
+<!-- bloc-1 END -->
+
+<!-- bloc-1 -->
+<div class="bloc bgc-789 d-bloc" id="bloc-1">
+	<div class="container bloc-md-sm">
+		<div class="row ">
+			<div class="col-md-2 text-left offset-lg-3 col-lg-6">
+				<a href="https://tripasect.github.io/2lfin-panel/days_of_the_week/SAT.html" class="btn btn-d btn-lg btn-style btn-clean">سفارش‌های شنبه<br></a>
+			</div>
+			<div class="col-md-2 text-left offset-lg-3 col-lg-6">
+				<a href="https://tripasect.github.io/2lfin-panel/days_of_the_week/SUN.html" class="btn btn-d btn-lg btn-style btn-clean">سفارش‌های یکشنبه<br></a>
+			</div>
+			<div class="col-md-2 text-left offset-lg-3 col-lg-6">
+				<a href="https://tripasect.github.io/2lfin-panel/days_of_the_week/MON.html" class="btn btn-d btn-lg btn-style btn-clean">سفارش‌های دوشنبه<br></a>
+			</div>
+			<div class="col-md-2 text-left offset-lg-3 col-lg-6">
+				<a href="https://tripasect.github.io/2lfin-panel/days_of_the_week/TUE.html" class="btn btn-d btn-lg btn-style btn-clean">سفارش‌های سه‌شنبه<br></a>
+			</div>
+			<div class="col-md-2 text-left offset-lg-3 col-lg-6">
+				<div class="text-center">
+					<a href="https://tripasect.github.io/2lfin-panel/days_of_the_week/WED.html" class="btn btn-d btn-lg btn-style btn-clean">سفارش‌های چهارشنبه<br></a>
+				</div>
+			</div>
+			<div class="col-md-2 text-left offset-lg-3 col-lg-6">
+				<a href="https://tripasect.github.io/2lfin-panel/days_of_the_week/THU.html" class="btn btn-d btn-lg btn-style btn-clean">سفارش‌های پنجشنبه</a>
+			</div>
+			<div class="col-md-2 text-left offset-lg-3 col-lg-6">
+				<a href="https://tripasect.github.io/2lfin-panel/days_of_the_week/FRI.html" class="btn btn-d btn-lg btn-style btn-clean">سفارش‌های جمعه<br></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-1 END -->
+
+<!-- ScrollToTop Button -->
+<button aria-label="Scroll to top button" class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1',this)"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32"><path class="scroll-to-top-btn-icon" d="M30,22.656l-14-13-14,13"/></svg></button>
+<!-- ScrollToTop Button END-->
+
+
+</div>
+<!-- Main container END -->
+    
+
+
+<!-- Additional JS -->
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/blocs.js"></script>
+<script src="./js/lazysizes.min.js" defer></script><!-- Additional JS END -->
 
 
 </body>
